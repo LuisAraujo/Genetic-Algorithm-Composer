@@ -24,12 +24,10 @@ We create a evaluation for this notes as: This note is a note of Scale? This not
 *Example:*
 
 - Good Sound
-Chords:  C             F            G
-Melody:  C - E  -  E - F - G  - A - B - G
+  - Melody (Chords):  C (C) - E  -  E - G (G) - F  - A - B (G) - G
 
 - Bad Sound (G is not a note of F Chord)
-Chords:  C             F            G
-Melody:  C - E  -  E - G - F  - A - B - G
+  - Melody (Chords):  C (C) - E  -  E - G (F) - F  - A - B (G) - G
 
 ### Mutation
 
@@ -38,13 +36,13 @@ We will split a melody in parts and join thesis parts with other parts of other 
 *Example:*
 
 - Melody 1
-C - E  -  E - F - G  - A - B - G
+  - C - E  -  E - F - G  - A - B - G
 
 - Melody 2         
-C - E  -  F - G - G - B- B - G 
+  - C - E  -  F - G - G - B- B - G 
 
 - Child
-C - E  -  E - F - G - B- B - G 
+  - C - E  -  E - F - G - B- B - G 
 
 
 
