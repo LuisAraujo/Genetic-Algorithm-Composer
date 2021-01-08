@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title> IA Composer</title>
+	<style></style>
+	<script src="Gene.js"></script>
+	<script src="Chromosomu.js"></script>
+	<script src="Population.js"></script>
+
+	<script src="Util.js"></script>
+	<script src="sound.js"></script>
+</head>
+
+
+<body id="body">
+
+<!--buttons -->
+<button id="play"> PLAY </button> <button id="stop">STOP </button> 
+<br>
+<!-- harmony -->
+<span><b>array harmony (chords)</b><span><div id="harmony"> </div>
+<br>
+<!-- notes results -->
+<span><b>array music (note, duration, start)</b><span><div id="result"> </div>
+<br>
+<br>
+<br>
+<!--info on generations after here -->
+<h4>Generations</h4>
+
+
+
+<script>
+
+var oscillator;
+var stopNow = false;
+var music = null;
+
+//Music information
+harmonic = ["C", "C", "C","C", "Am", "Am", "Am", "Am", "F", "F", "F", "F", "G", "G", "G", "G7", "C", "C", "C", "C"];
+
+tone = "C";
+
+//Genetic Algorithms Settings
+MAXGENERATION = 1000;
+
+
+window.onload = function(){
+	p = new Population(10);
+	p.generation();
+}
+
+
+function secound(){	
+	//setting start music
+	document.getElementById("play").addEventListener('click', function(evt) {
+		startTimeline();
+	});
+	//setting stop music
+	document.getElementById("stop").addEventListener('click', function(evt) {
+		stopTimeline();
+	});
+	
+	startSound(music);
+
+}
+
+function endGeneration(members){
+	music = members;
+	secound();
+	console.log( members ) ;
+}
+
+
+</script>
+</body>
+</html>
